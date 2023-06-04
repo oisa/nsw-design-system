@@ -20,20 +20,21 @@
 
   li {
     margin: 0;
-    border-top: 1px solid var(--nsw-grey-04);
+    border-bottom: 1px solid var(--nsw-grey-04);
 
     &:last-child {
-      border-bottom: 1px solid var(--nsw-grey-04);
+      border-bottom: unset;
     }
   }
 
-  a {
+  .nsw-utility-list-item {
     padding: rem(16px);
     color: var(--nsw-brand-dark);
     display: flex;
     gap: $grid-gutters;
     align-items: center;
     text-decoration: none;
+    cursor: pointer;
 
     &:hover {
       @include nsw-hover;
@@ -45,7 +46,8 @@
     }
 
     span {
-      text-decoration: underline;
+      // text-decoration: underline;
+      color: var(--nsw-brand-dark);
     }
 
     .nsw-material-icons {
@@ -55,10 +57,96 @@
     .nsw-section--invert & {    
       color: var(--nsw-text-light);
     }
+
+    svg {
+      width: rem(24px);
+      height: rem(24px);
+
+      path {
+        fill: var(--nsw-brand-dark);
+      }
+    }
   }
 
+  .nsw-toggletip {
+    border-bottom: unset;
+  }
+
+  .nsw-toggletip__content {
+    display: flex;
+    gap: $grid-gutters;
+    padding: 0 rem(24px) rem(24px) rem(24px);
+  }
+
+  // a {
+  //   padding: rem(16px);
+  //   color: var(--nsw-brand-dark);
+  //   display: flex;
+  //   gap: $grid-gutters;
+  //   align-items: center;
+  //   text-decoration: none;
+
+  //   &:hover {
+  //     @include nsw-hover;
+  //     outline-width: 0;
+  //   }
+
+  //   &:focus {
+  //     outline-width: 3px;
+  //   }
+
+  //   span {
+  //     text-decoration: underline;
+  //   }
+
+  //   .nsw-material-icons {
+  //     text-decoration: none;
+  //   }
+
+  //   .nsw-section--invert & {    
+  //     color: var(--nsw-text-light);
+  //   }
+  // }
+
   .nsw-material-icons {
-    font-size: rem(map-get($nsw-icon-sizes, 20));
+    font-size: rem(map-get($nsw-icon-sizes, 24));
+  }
+
+  &--dark {
+    background-color: var(--nsw-brand-dark);
+
+    span {
+      color: var(--nsw-text-light);
+    }
+    
+    .nsw-utility-list-item {
+      color: var(--nsw-text-light);
+      
+      span {
+        color: var(--nsw-text-light);
+      }
+    }
+    
+    .nsw-toggletip__content {
+      span {
+        color: var(--nsw-brand-dark);
+      }
+    }
+
+    .nsw-toggletip__header {
+      span {
+        color: var(--nsw-brand-dark);
+      }
+    }
+  }
+
+  &--light {
+    li {
+      border-color: var(--nsw-off-white);
+    }
+
+    background-color: var(--nsw-brand-light);
+    color: var(--nsw-text-dark);
   }
 }
 

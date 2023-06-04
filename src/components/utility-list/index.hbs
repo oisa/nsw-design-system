@@ -18,10 +18,22 @@ meta-index: true
 <div class="nsw-tabs js-tabs">
   <ul class="nsw-tabs__list">
     <li><a href="#utility-list-default" class="js-tabs-fixed">Default</a></li>
+    <li><a href="#utility-list-light" class="js-tabs-fixed">Light</a></li>
+    <li><a href="#utility-list-dark" class="js-tabs-fixed">Dark</a></li>
   </ul>
   <section id="utility-list-default" class="nsw-tabs__content">
 {{#>_docs-example}}
 {{>_utility-list model.social-1 theme="default" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+{{/_docs-example}}
+  </section>
+  <section id="utility-list-light" class="nsw-tabs__content">
+{{#>_docs-example}}
+{{>_utility-list model.social-1 theme="light" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+{{/_docs-example}}
+  </section>
+  <section id="utility-list-dark" class="nsw-tabs__content">
+{{#>_docs-example}}
+{{>_utility-list model.social-1 theme="dark" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
 {{/_docs-example}}
   </section>
 </div>
