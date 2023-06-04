@@ -1,0 +1,27 @@
+---
+title: Utility list
+width: narrow
+tabs: true
+directory: utility-list
+intro: Utility lists provide standardised page sharing functionalities.
+figma: https://www.figma.com/file/wvxKYNVNkMGg8pKzpUIXz7/NSW-Digital-Design-System?type=design&node-id=68692-43116&t=24rGAF3HMbe9sSLy-4
+react: https://digitalnsw.github.io/nsw-design-system-react/?path=/docs/content-styled-link-list--styled-link-list
+model: 
+    social-1: json/utility-list-social-share-1.json
+meta-description: Utility lists provide standardised page sharing functionalities.
+meta-index: true
+---
+
+{{!-- {{#>_docs-example}}{{>_utility-list model}}{{/_docs-example}} --}}
+
+<h3>Utility List - Vertical</h3>
+<div class="nsw-tabs js-tabs">
+  <ul class="nsw-tabs__list">
+    <li><a href="#utility-list-default" class="js-tabs-fixed">Default</a></li>
+  </ul>
+  <section id="utility-list-default" class="nsw-tabs__content">
+{{#>_docs-example}}
+{{>_utility-list model.social-1 theme="default" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+{{/_docs-example}}
+  </section>
+</div>

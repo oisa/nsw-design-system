@@ -1,0 +1,64 @@
+.nsw-utility-list {
+  @include component-spacing();
+  background-color: var(--nsw-off-white);
+
+  &__title {
+    @include font-size('lg');
+    font-weight: var(--nsw-font-bold);
+    padding-bottom: rem(16px);
+    
+    @include breakpoint('md') {
+      padding-bottom: rem(24px);
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    margin: 0;
+    border-top: 1px solid var(--nsw-grey-04);
+
+    &:last-child {
+      border-bottom: 1px solid var(--nsw-grey-04);
+    }
+  }
+
+  a {
+    padding: rem(16px);
+    color: var(--nsw-brand-dark);
+    display: flex;
+    gap: $grid-gutters;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover {
+      @include nsw-hover;
+      outline-width: 0;
+    }
+
+    &:focus {
+      outline-width: 3px;
+    }
+
+    span {
+      text-decoration: underline;
+    }
+
+    .nsw-material-icons {
+      text-decoration: none;
+    }
+
+    .nsw-section--invert & {    
+      color: var(--nsw-text-light);
+    }
+  }
+
+  .nsw-material-icons {
+    font-size: rem(map-get($nsw-icon-sizes, 20));
+  }
+}
+

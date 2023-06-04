@@ -1,0 +1,47 @@
+<div class="nsw-utility-list">
+  {{#if title}}
+  <div class="nsw-utility-list__title">{{title}}</div>
+  {{/if}}
+  <ul>
+    {{!-- {{#each list}}
+    <li>
+      <a href="#">
+        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">link</span>
+        <span>{{this}}</span>
+      </a>
+    </li>
+    {{/each}} --}}
+    {{#if toggle-copy-link}}
+    <li>
+      <a href="#">
+        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">link</span>
+        <span>Copy link</span>
+      </a>
+    </li>
+    {{/if}}
+    {{#if toggle-print-page}}
+    <li>
+      <a href="#">
+        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">print</span>
+        <span>Print this page</span>
+      </a>
+    </li>
+    {{/if}}
+    {{#if toggle-download-pdf}}
+    <li>
+      <a href="#">
+        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">download</span>
+        <span>Download as PDF</span>
+      </a>
+    </li>
+    {{/if}}
+    {{#if this.social-share}}
+    <li>
+      <a href="#">
+        <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">share</span>
+        <span>Share this page</span>
+      </a>
+    </li>
+    {{/if}}
+  </ul>
+</div>
