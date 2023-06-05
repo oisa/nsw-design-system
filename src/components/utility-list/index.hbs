@@ -11,7 +11,7 @@ meta-description: Utility lists provide standardised page sharing functionalitie
 meta-index: true
 ---
 
-<h3 id="utility-list-vertical utility-list-horizontal">Utility List - Vertical</h3>
+<h3>Utility List</h3>
 <div class="nsw-tabs js-tabs">
   <ul class="nsw-tabs__list">
     <li><a href="#utility-list-default" class="js-tabs-fixed">Default</a></li>
@@ -19,47 +19,50 @@ meta-index: true
     <li><a href="#utility-list-dark" class="js-tabs-fixed">Dark</a></li>
   </ul>
   <section id="utility-list-default" class="nsw-tabs__content">
-    {{#>_docs-example}}
-      {{>_utility-list model.social-1 theme="default" arrangement="vertical" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
-    {{/_docs-example}}
+    <div class="utility-list-component">
+      <h4>Vertical</h4>
+      {{#>_docs-example}}
+        {{>_utility-list model.social-1 theme="default" arrangement="vertical" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+      {{/_docs-example}}
+    </div>
+    <div class="utility-list-component">
+      <h4>Horizontal</h4>
+      {{#>_docs-example}}
+        {{>_utility-list model.social-1 theme="default" arrangement="horizontal" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+      {{/_docs-example}}
+    </div>
   </section>
   <section id="utility-list-light" class="nsw-tabs__content">
-    {{#>_docs-example}}
-      {{>_utility-list model.social-1 theme="light" arrangement="vertical" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
-    {{/_docs-example}}
+    <div class="utility-list-component">
+      <h4>Vertical</h4>
+      {{#>_docs-example}}
+        {{>_utility-list model.social-1 theme="light" arrangement="vertical" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+      {{/_docs-example}}
+    </div>
+    <div class="utility-list-component">
+      <h4>Horizontal</h4>
+      {{#>_docs-example}}
+        {{>_utility-list model.social-1 theme="light" arrangement="horizontal" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+      {{/_docs-example}}
+    </div>
   </section>
   <section id="utility-list-dark" class="nsw-tabs__content">
-    {{#>_docs-example}}
-      {{>_utility-list model.social-1 theme="dark" arrangement="vertical" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
-    {{/_docs-example}}
+    <div class="utility-list-component">
+      <h4>Vertical</h4>
+      {{#>_docs-example}}
+        {{>_utility-list model.social-1 theme="dark" arrangement="vertical" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+      {{/_docs-example}}
+    </div>
+    <div class="utility-list-component">
+      <h4>Horizontal</h4>
+      {{#>_docs-example}}
+        {{>_utility-list model.social-1 theme="dark" arrangement="horizontal" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+      {{/_docs-example}}
+    </div>
   </section>
 </div>
 
-<h3 id="utility-list-horizontal">Utility List - Horizontal</h3>
-<div class="nsw-tabs js-tabs">
-  <ul class="nsw-tabs__list">
-    <li><a href="#utility-list-default" class="js-tabs-fixed">Default</a></li>
-    <li><a href="#utility-list-light" class="js-tabs-fixed">Light</a></li>
-    <li><a href="#utility-list-dark" class="js-tabs-fixed">Dark</a></li>
-  </ul>
-  <section id="utility-list-default" class="nsw-tabs__content">
-    {{#>_docs-example}}
-      {{>_utility-list model.social-1 theme="default" arrangement="horizontal" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
-    {{/_docs-example}}
-  </section>
-  <section id="utility-list-light" class="nsw-tabs__content">
-    {{#>_docs-example}}
-      {{>_utility-list model.social-1 theme="light" arrangement="horizontal" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
-    {{/_docs-example}}
-  </section>
-  <section id="utility-list-dark" class="nsw-tabs__content">
-    {{#>_docs-example}}
-      {{>_utility-list model.social-1 theme="dark" arrangement="horizontal" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
-    {{/_docs-example}}
-  </section>
-</div>
-
-<h3 id="copy-anchor-link-element">Copy Anchor Link Element</h3>
+<h3 id="copy-anchor-link-element">Copy Header Link Element</h3>
 <div class="example-container">
   {{#>_docs-example}}
     <h2 id="section-header-1">Section Header 1</h2>
