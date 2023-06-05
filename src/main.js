@@ -11,6 +11,7 @@ import Tooltip from './components/tooltip/tooltip'
 import Toggletip from './components/tooltip/toggletip'
 import CopyToClipboard from './components/utility-list/copy-clipboard'
 import SocialSharing from './components/utility-list/social-sharing'
+import PrintPage from './components/utility-list/print-page'
 
 if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = Array.prototype.forEach
@@ -47,6 +48,7 @@ function initSite() {
   const toggletip = document.querySelectorAll('.js-toggletip')
   const copyToClipboard = document.querySelectorAll('.js-copy-clipboard')
   const socialSharing = document.querySelectorAll('.js-social-sharing')
+  const printPage = document.querySelectorAll('.js-print-page')
 
   openSearchButton.forEach((element) => {
     new SiteSearch(element).init()
@@ -122,8 +124,14 @@ function initSite() {
       }
     })
   }
+
+  if (printPage) {
+    printPage.forEach((element) => {
+      new PrintPage(element).init()
+    })
+  }
 }
 
 export {
-  initSite, SiteSearch, Navigation, Accordion, Tabs, GlobalAlert, Dialog, Filters, FileUpload, Select, Tooltip, Toggletip, CopyToClipboard, SocialSharing,
+  initSite, SiteSearch, Navigation, Accordion, Tabs, GlobalAlert, Dialog, Filters, FileUpload, Select, Tooltip, Toggletip, CopyToClipboard, SocialSharing, PrintPage,
 }
