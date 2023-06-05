@@ -13,10 +13,10 @@
     {{/if}}
     {{#if toggle-print-page}}
     <li>
-      <span class="nsw-utility-list-item js-print-page">
+      <div class="nsw-utility-list-item js-print-page">
         <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">print</span>
         Print this page
-      </span>
+      </div>
     </li>
     {{/if}}
     {{#if toggle-download-pdf}}
@@ -30,7 +30,6 @@
     {{#if this.social-share}}
     <li>
       <span class="nsw-utility-list-item">
-        
         <span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">share</span>
         <div aria-controls="toggletip-social-share-{{theme}}" class="nsw-toggletip js-toggletip" data-title="Social Sharing">Share this page</div>
         {{!-- Toggletip Content --}}

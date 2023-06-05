@@ -35,6 +35,8 @@
     align-items: center;
     text-decoration: none;
     cursor: pointer;
+    font-weight: var(--nsw-font-bold);
+    // text-decoration: underline;
 
     &:hover {
       @include nsw-hover;
@@ -47,10 +49,6 @@
 
     span {
       color: var(--nsw-brand-dark);
-    }
-
-    .nsw-material-icons {
-      text-decoration: none;
     }
 
     .nsw-section--invert & {    
