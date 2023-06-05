@@ -1,6 +1,6 @@
 class PrintPage {
   static init() {
-    const printPages = document.querySelectorAll('.print-page')
+    const printPages = document.querySelectorAll('.js-print-page')
     printPages.forEach((printPage) => {
       printPage.addEventListener('click', () => {
         window.print()
