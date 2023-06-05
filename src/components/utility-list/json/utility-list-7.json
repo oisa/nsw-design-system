@@ -1,13 +1,13 @@
 {
     "arrangement": "vertical",
-    "theme": "light",
+    "theme": "default",
     "copy-page-link": true,
-    "print-page": true,
-    "download-as-pdf": true,
+    "print-page": false,
+    "download-as-pdf": false,
     "social-share": {
-        "facebook": true,
+        "facebook": false,
         "linkedin": true,
-        "twitter": true,
+        "twitter": false,
         "email": true
     },
     "copy-header-links": true

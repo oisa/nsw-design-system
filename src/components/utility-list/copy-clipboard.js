@@ -16,7 +16,7 @@ class CopyToClipboard {
   }
 
   static checkCopyAnchor() {
-    const checkCopyAnchor = document.querySelector('.js-copy-clipboard-anchor')
+    const checkCopyAnchor = document.querySelector('.js-copy-header-links')
     if (checkCopyAnchor) {
       const h2Elements = document.querySelectorAll('h2')
       h2Elements.forEach((h2) => {

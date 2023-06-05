@@ -37,7 +37,6 @@
     text-decoration: none;
     cursor: pointer;
     font-weight: var(--nsw-font-bold);
-    // text-decoration: underline;
 
     &:hover {
       @include nsw-hover;
@@ -92,15 +91,17 @@
   }
 
   &--horizontal {
-    display: flex;
-    
-    ul {
+    @include breakpoint('md') {
       display: flex;
-      flex: auto;
-    }
-
-    li {
-      border-bottom: unset;
+    
+      ul {
+        display: flex;
+        flex: auto;
+      }
+  
+      li {
+        border-bottom: unset;
+      }
     }
   }
 
@@ -124,6 +125,7 @@
       display: flex;
       padding: rem(8px);
       border-radius: var(--nsw-border-radius);
+      text-decoration: none;
     }
   }
 }
@@ -142,7 +144,7 @@
   }
 }
 
-.utility-list-component {
+.example-component {
   margin: 0 0 rem(32px) 0;
 
   h4 {

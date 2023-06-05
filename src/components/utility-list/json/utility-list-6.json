@@ -1,6 +1,6 @@
 {
-    "arrangement": "vertical",
-    "theme": "light",
+    "arrangement": "horizontal",
+    "theme": "dark",
     "copy-page-link": true,
     "print-page": true,
     "download-as-pdf": true,
