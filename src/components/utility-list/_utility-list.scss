@@ -46,7 +46,6 @@
     }
 
     span {
-      // text-decoration: underline;
       color: var(--nsw-brand-dark);
     }
 
@@ -78,66 +77,32 @@
     padding: 0 rem(24px) rem(24px) rem(24px);
   }
 
-  // a {
-  //   padding: rem(16px);
-  //   color: var(--nsw-brand-dark);
-  //   display: flex;
-  //   gap: $grid-gutters;
-  //   align-items: center;
-  //   text-decoration: none;
-
-  //   &:hover {
-  //     @include nsw-hover;
-  //     outline-width: 0;
-  //   }
-
-  //   &:focus {
-  //     outline-width: 3px;
-  //   }
-
-  //   span {
-  //     text-decoration: underline;
-  //   }
-
-  //   .nsw-material-icons {
-  //     text-decoration: none;
-  //   }
-
-  //   .nsw-section--invert & {    
-  //     color: var(--nsw-text-light);
-  //   }
-  // }
-
   .nsw-material-icons {
     font-size: rem(map-get($nsw-icon-sizes, 24));
   }
 
-  &--dark {
-    background-color: var(--nsw-brand-dark);
-
-    span {
-      color: var(--nsw-text-light);
-    }
-    
+  &--dark {    
     .nsw-utility-list-item {
       color: var(--nsw-text-light);
+      background-color: var(--nsw-brand-dark);
       
       span {
         color: var(--nsw-text-light);
       }
-    }
-    
-    .nsw-toggletip__content {
-      span {
-        color: var(--nsw-brand-dark);
+
+      &:hover {
+        background-color: var(--nsw-brand-dark);
+        background-image: linear-gradient(rgba(var(--nsw-white-rgb), 0.15), rgba(var(--nsw-white-rgb), 0.15));
       }
     }
-
+    
+    .nsw-toggletip__content,
     .nsw-toggletip__header {
       span {
         color: var(--nsw-brand-dark);
       }
     }
+
   }
 
   &--light {
@@ -150,3 +115,16 @@
   }
 }
 
+.copy-clipboard-anchor {
+  cursor: pointer;
+
+  span {
+    padding-left: rem(4px);
+    color: var(--nsw-grey-02);
+    vertical-align: middle;
+  }
+
+  span:nth-of-type(2) {
+    font-size: 16px;
+  }
+}

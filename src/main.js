@@ -9,6 +9,7 @@ import GlobalAlert from './components/global-alert/global-alert'
 import Select from './components/select/select'
 import Tooltip from './components/tooltip/tooltip'
 import Toggletip from './components/tooltip/toggletip'
+import CopyToClipboard from './components/utility-list/copy-clipboard'
 
 if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = Array.prototype.forEach
@@ -43,6 +44,7 @@ function initSite() {
   const multiSelect = document.querySelectorAll('.js-multi-select')
   const tooltip = document.querySelectorAll('.js-tooltip')
   const toggletip = document.querySelectorAll('.js-toggletip')
+  const copyToClipboard = document.querySelectorAll('.js-copy-clipboard')
 
   openSearchButton.forEach((element) => {
     new SiteSearch(element).init()
@@ -102,6 +104,12 @@ function initSite() {
   if (toggletip) {
     toggletip.forEach((element) => {
       new Toggletip(element).init()
+    })
+  }
+
+  if (copyToClipboard) {
+    copyToClipboard.forEach((element) => {
+      new CopyToClipboard(element).init()
     })
   }
 }
