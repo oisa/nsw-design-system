@@ -5,7 +5,6 @@ tabs: true
 directory: utility-list
 intro: Utility lists provide standardised page sharing functionalities.
 figma: https://www.figma.com/file/wvxKYNVNkMGg8pKzpUIXz7/NSW-Digital-Design-System?type=design&node-id=68692-43116&t=24rGAF3HMbe9sSLy-4
-react: https://digitalnsw.github.io/nsw-design-system-react/?path=/docs/content-styled-link-list--styled-link-list
 model: 
     social-1: json/utility-list-social-share-1.json
 meta-description: Utility lists provide standardised page sharing functionalities.
@@ -20,28 +19,57 @@ meta-index: true
     <li><a href="#utility-list-dark" class="js-tabs-fixed">Dark</a></li>
   </ul>
   <section id="utility-list-default" class="nsw-tabs__content">
-  {{#>_docs-example}}
-  {{>_utility-list model.social-1 theme="default" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
-  {{/_docs-example}}
+    {{#>_docs-example}}
+      {{>_utility-list model.social-1 theme="default" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+    {{/_docs-example}}
   </section>
   <section id="utility-list-light" class="nsw-tabs__content">
-  {{#>_docs-example}}
-  {{>_utility-list model.social-1 theme="light" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
-  {{/_docs-example}}
+    {{#>_docs-example}}
+      {{>_utility-list model.social-1 theme="light" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+    {{/_docs-example}}
   </section>
   <section id="utility-list-dark" class="nsw-tabs__content">
-  {{#>_docs-example}}
-  {{>_utility-list model.social-1 theme="dark" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
-  {{/_docs-example}}
+    {{#>_docs-example}}
+      {{>_utility-list model.social-1 theme="dark" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+    {{/_docs-example}}
+  </section>
+</div>
+
+<h3 id="utility-list-horizontal">Utility List - Horizontal</h3>
+<div class="nsw-tabs js-tabs">
+  <ul class="nsw-tabs__list">
+    <li><a href="#utility-list-default" class="js-tabs-fixed">Default</a></li>
+    <li><a href="#utility-list-light" class="js-tabs-fixed">Light</a></li>
+    <li><a href="#utility-list-dark" class="js-tabs-fixed">Dark</a></li>
+  </ul>
+  <section id="utility-list-default" class="nsw-tabs__content">
+    {{#>_docs-example}}
+      {{>_utility-list model.social-1 theme="default" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+    {{/_docs-example}}
+  </section>
+  <section id="utility-list-light" class="nsw-tabs__content">
+    {{#>_docs-example}}
+      {{>_utility-list model.social-1 theme="light" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+    {{/_docs-example}}
+  </section>
+  <section id="utility-list-dark" class="nsw-tabs__content">
+    {{#>_docs-example}}
+      {{>_utility-list model.social-1 theme="dark" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+    {{/_docs-example}}
   </section>
 </div>
 
 <h3 id="copy-anchor-link-element">Copy Anchor Link Element</h3>
-
-<div class="">
-{{#>_docs-example}}
-<h2 id="section-header">Section Header</h2>
-<p>Simply include the class 'js-copy-clipboard-anchor' within your Utility List component and all the H2 tags on the page that possess an ID will append a copy icon.</p>
-<p>When any of the H2 heading is clicked (including the appended copy icon), an anchor link to the section the H2 tag represents will be created and saved to the user's clipboard.</p>
-{{/_docs-example}}
+<div class="example-container">
+  {{#>_docs-example}}
+    <h2 id="section-header-1">Section Header 1</h2>
+    <p>Simply include the class 'js-copy-clipboard-anchor' within your Utility List component and all the H2 tags on the page that possess an ID will append a copy icon.</p>
+    <p>When any of the H2 heading is clicked (including the appended copy icon), an anchor link to the section the H2 tag represents will be created and saved to the user's clipboard.</p>
+    <h2>Section Header 2</h2>
+    <p>Without an ID, this is what the header will look like with the feature enabled. It is recommended to include relevant IDs for headings for various reasons (accessibility, SEO).</p>
+    <p>It is common from within the departments using the NSW Digital Design System to find link lists which is ideal for this feature to leverage over the many articles and documents that have been written.</p>
+    <h2 id="section-header-3">Section Header 3</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  {{/_docs-example}}
 </div>
