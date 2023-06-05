@@ -10,6 +10,7 @@ import Select from './components/select/select'
 import Tooltip from './components/tooltip/tooltip'
 import Toggletip from './components/tooltip/toggletip'
 import CopyToClipboard from './components/utility-list/copy-clipboard'
+import SocialSharing from './components/utility-list/social-sharing'
 
 if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = Array.prototype.forEach
@@ -45,6 +46,7 @@ function initSite() {
   const tooltip = document.querySelectorAll('.js-tooltip')
   const toggletip = document.querySelectorAll('.js-toggletip')
   const copyToClipboard = document.querySelectorAll('.js-copy-clipboard')
+  const socialSharing = document.querySelectorAll('.js-social-sharing')
 
   openSearchButton.forEach((element) => {
     new SiteSearch(element).init()
@@ -60,6 +62,12 @@ function initSite() {
   accordions.forEach((element) => {
     new Accordion(element).init()
   })
+
+  if (copyToClipboard) {
+    copyToClipboard.forEach((element) => {
+      new CopyToClipboard(element).init()
+    })
+  }
 
   dialogs.forEach((element) => {
     new Dialog(element).init()
@@ -107,13 +115,15 @@ function initSite() {
     })
   }
 
-  if (copyToClipboard) {
-    copyToClipboard.forEach((element) => {
-      new CopyToClipboard(element).init()
+  if (socialSharing) {
+    socialSharing.forEach((element) => {
+      if (typeof element === 'function') {
+        SocialSharing(element).init()
+      }
     })
   }
 }
 
 export {
-  initSite, SiteSearch, Navigation, Accordion, Tabs, GlobalAlert, Dialog, Filters, FileUpload, Select, Tooltip, Toggletip,
+  initSite, SiteSearch, Navigation, Accordion, Tabs, GlobalAlert, Dialog, Filters, FileUpload, Select, Tooltip, Toggletip, CopyToClipboard, SocialSharing,
 }

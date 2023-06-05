@@ -20,20 +20,22 @@ meta-index: true
     <li><a href="#utility-list-dark" class="js-tabs-fixed">Dark</a></li>
   </ul>
   <section id="utility-list-default" class="nsw-tabs__content">
-{{#>_docs-example}}
-{{>_utility-list model.social-1 theme="default" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
-{{/_docs-example}}
+  {{#>_docs-example}}
+  {{>_utility-list model.social-1 theme="default" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+  {{/_docs-example}}
   </section>
   <section id="utility-list-light" class="nsw-tabs__content">
-{{#>_docs-example}}
-{{>_utility-list model.social-1 theme="light" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
-{{/_docs-example}}
+  {{#>_docs-example}}
+  {{>_utility-list model.social-1 theme="light" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+  {{/_docs-example}}
   </section>
   <section id="utility-list-dark" class="nsw-tabs__content">
-{{#>_docs-example}}
-{{>_utility-list model.social-1 theme="dark" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
-{{/_docs-example}}
+  {{#>_docs-example}}
+  {{>_utility-list model.social-1 theme="dark" toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+  {{/_docs-example}}
   </section>
 </div>
 
 <h2 id="copy-anchor-link-element">Copy Anchor Link Element</h2>
+<p>Simply include the class 'js-copy-clipboard-anchor' within your Utility List component and all the H2 tags on the page that possess an ID will append a copy icon.</p>
+<p>When any of the H2 heading is clicked (including the appended copy icon), an anchor link to the section the H2 tag represents will be created and saved to the user's clipboard.</p>
