@@ -111,6 +111,15 @@
     background-color: var(--nsw-brand-light);
     color: var(--nsw-text-dark);
   }
+
+  &--horizontal {
+    display: flex;
+    
+    ul {
+      display: flex;
+      flex: auto;
+    }
+  }
 }
 
 .copy-clipboard-anchor {
