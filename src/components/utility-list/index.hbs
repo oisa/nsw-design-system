@@ -7,13 +7,17 @@ intro: Utility lists provide standardised page sharing functionalities.
 figma: https://www.figma.com/file/wvxKYNVNkMGg8pKzpUIXz7/NSW-Digital-Design-System?type=design&node-id=68692-43116&t=24rGAF3HMbe9sSLy-4
 model: 
     utility-list-1: json/utility-list-1.json
+    utility-list-1-limited: json/utility-list-1-limited.json
     utility-list-2: json/utility-list-2.json
+    utility-list-2-limited: json/utility-list-2-limited.json
     utility-list-3: json/utility-list-3.json
+    utility-list-3-limited: json/utility-list-3-limited.json
     utility-list-4: json/utility-list-4.json
+    utility-list-4-limited: json/utility-list-4-limited.json
     utility-list-5: json/utility-list-5.json
+    utility-list-5-limited: json/utility-list-5-limited.json
     utility-list-6: json/utility-list-6.json
-    utility-list-7: json/utility-list-7.json
-    utility-list-8: json/utility-list-8.json
+    utility-list-6-limited: json/utility-list-6-limited.json
 meta-description: Utility lists provide standardised page sharing functionalities.
 meta-index: true
 ---
@@ -33,9 +37,22 @@ meta-index: true
       {{/_docs-example}}
     </div>
     <div class="example-component">
+      <h5>Example with fewer options</h5>
+      {{#>_docs-example}}
+        {{>_utility-list model.utility-list-1-limited toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+      {{/_docs-example}}
+    </div>
+    <hr />
+    <div class="example-component">
       <h4>Horizontal</h4>
       {{#>_docs-example}}
         {{>_utility-list model.utility-list-2 toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+      {{/_docs-example}}
+    </div>
+    <div class="example-component">
+      <h5>Example with fewer options</h5>
+      {{#>_docs-example}}
+        {{>_utility-list model.utility-list-2-limited toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
       {{/_docs-example}}
     </div>
   </section>
@@ -47,9 +64,21 @@ meta-index: true
       {{/_docs-example}}
     </div>
     <div class="example-component">
+      <h5>Example with fewer options</h5>
+      {{#>_docs-example}}
+        {{>_utility-list model.utility-list-3-limited toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+      {{/_docs-example}}
+    </div>
+    <div class="example-component">
       <h4>Horizontal</h4>
       {{#>_docs-example}}
         {{>_utility-list model.utility-list-4 toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+      {{/_docs-example}}
+    </div>
+    <div class="example-component">
+      <h5>Example with fewer options</h5>
+      {{#>_docs-example}}
+        {{>_utility-list model.utility-list-4-limited toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
       {{/_docs-example}}
     </div>
   </section>
@@ -61,29 +90,25 @@ meta-index: true
       {{/_docs-example}}
     </div>
     <div class="example-component">
+      <h5>Example with fewer options</h5>
+      {{#>_docs-example}}
+        {{>_utility-list model.utility-list-5-limited toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+      {{/_docs-example}}
+    </div>
+    <div class="example-component">
       <h4>Horizontal</h4>
       {{#>_docs-example}}
         {{>_utility-list model.utility-list-6 toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
       {{/_docs-example}}
     </div>
+    <div class="example-component">
+      <h5>Example with fewer options</h5>
+      {{#>_docs-example}}
+        {{>_utility-list model.utility-list-6-limited toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
+      {{/_docs-example}}
+    </div>
   </section>
 </div>
-
-<h3>Utility List - Limited Options</h3>
-<section class="nsw-tabs__content">
-  <div class="example-component">
-    <h4>Vertical</h4>
-    {{#>_docs-example}}
-      {{>_utility-list model.utility-list-7 toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
-    {{/_docs-example}}
-  </div>
-  <div class="example-component">
-    <h4>Horizontal</h4>
-    {{#>_docs-example}}
-      {{>_utility-list model.utility-list-8 toggle-copy-link=true toggle-print-page=true toggle-download-pdf=true}}
-    {{/_docs-example}}
-  </div>
-</section>
 
 <h3 id="copy-anchor-link-element">Copy Header Link Element</h3>
 <div class="example-container">
