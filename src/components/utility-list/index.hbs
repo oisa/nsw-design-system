@@ -1,0 +1,126 @@
+---
+title: Utility list
+width: narrow
+tabs: true
+directory: utility-list
+intro: Utility lists provide standardised page sharing functionalities.
+figma: https://www.figma.com/file/wvxKYNVNkMGg8pKzpUIXz7/NSW-Digital-Design-System?type=design&node-id=68692-43116&t=24rGAF3HMbe9sSLy-4
+model: 
+    utility-list-1: json/utility-list-1.json
+    utility-list-1-limited: json/utility-list-1-limited.json
+    utility-list-2: json/utility-list-2.json
+    utility-list-2-limited: json/utility-list-2-limited.json
+    utility-list-3: json/utility-list-3.json
+    utility-list-3-limited: json/utility-list-3-limited.json
+    utility-list-4: json/utility-list-4.json
+    utility-list-4-limited: json/utility-list-4-limited.json
+    utility-list-5: json/utility-list-5.json
+    utility-list-5-limited: json/utility-list-5-limited.json
+    utility-list-6: json/utility-list-6.json
+    utility-list-6-limited: json/utility-list-6-limited.json
+meta-description: Utility lists provide standardised page sharing functionalities.
+meta-index: true
+---
+
+<h3>Utility List</h3>
+<div class="nsw-tabs js-tabs">
+  <ul class="nsw-tabs__list">
+    <li><a href="#utility-list-default" class="js-tabs-fixed">Default</a></li>
+    <li><a href="#utility-list-light" class="js-tabs-fixed">Light</a></li>
+    <li><a href="#utility-list-dark" class="js-tabs-fixed">Dark</a></li>
+  </ul>
+  <section id="utility-list-default" class="nsw-tabs__content">
+    <div class="example-component">
+      <h4>Vertical</h4>
+      {{#>_docs-example}}
+        {{>_utility-list model.utility-list-1}}
+      {{/_docs-example}}
+    </div>
+    <div class="example-component">
+      <h5>Example with fewer options</h5>
+      {{#>_docs-example}}
+        {{>_utility-list model.utility-list-1-limited}}
+      {{/_docs-example}}
+    </div>
+    <hr />
+    <div class="example-component">
+      <h4>Horizontal</h4>
+      {{#>_docs-example}}
+        {{>_utility-list model.utility-list-2}}
+      {{/_docs-example}}
+    </div>
+    <div class="example-component">
+      <h5>Example with fewer options</h5>
+      {{#>_docs-example}}
+        {{>_utility-list model.utility-list-2-limited}}
+      {{/_docs-example}}
+    </div>
+  </section>
+  <section id="utility-list-light" class="nsw-tabs__content">
+    <div class="example-component">
+      <h4>Vertical</h4>
+      {{#>_docs-example}}
+        {{>_utility-list model.utility-list-3}}
+      {{/_docs-example}}
+    </div>
+    <div class="example-component">
+      <h5>Example with fewer options</h5>
+      {{#>_docs-example}}
+        {{>_utility-list model.utility-list-3-limited}}
+      {{/_docs-example}}
+    </div>
+    <div class="example-component">
+      <h4>Horizontal</h4>
+      {{#>_docs-example}}
+        {{>_utility-list model.utility-list-4}}
+      {{/_docs-example}}
+    </div>
+    <div class="example-component">
+      <h5>Example with fewer options</h5>
+      {{#>_docs-example}}
+        {{>_utility-list model.utility-list-4-limited}}
+      {{/_docs-example}}
+    </div>
+  </section>
+  <section id="utility-list-dark" class="nsw-tabs__content">
+    <div class="example-component">
+      <h4>Vertical</h4>
+      {{#>_docs-example}}
+        {{>_utility-list model.utility-list-5}}
+      {{/_docs-example}}
+    </div>
+    <div class="example-component">
+      <h5>Example with fewer options</h5>
+      {{#>_docs-example}}
+        {{>_utility-list model.utility-list-5-limited}}
+      {{/_docs-example}}
+    </div>
+    <div class="example-component">
+      <h4>Horizontal</h4>
+      {{#>_docs-example}}
+        {{>_utility-list model.utility-list-6}}
+      {{/_docs-example}}
+    </div>
+    <div class="example-component">
+      <h5>Example with fewer options</h5>
+      {{#>_docs-example}}
+        {{>_utility-list model.utility-list-6-limited}}
+      {{/_docs-example}}
+    </div>
+  </section>
+</div>
+
+<h3 id="copy-anchor-link-element">Copy Header Link Element</h3>
+<div class="example-container">
+  {{#>_docs-example}}
+    <h2 id="section-header-1">Section Header 1</h2>
+    <p>Simply include the class 'js-copy-header-links' within your Utility List component and all the H2 tags on the page that possess an ID will append a copy icon.</p>
+    <p>When any of the H2 heading is clicked (including the appended copy icon), an anchor link to the section the H2 tag represents will be created and saved to the user's clipboard.</p>
+    <h2>Section Header 2</h2>
+    <p>Without an ID, this is what the header will look like with the feature enabled. It is recommended to include relevant IDs for headings for various reasons (particularly accessibility and SEO).</p>
+    <p>It is common from within the departments using the NSW Digital Design System to find link lists which is ideal for this feature to leverage over the many articles and documents that have been written.</p>
+    <h2 id="section-header-3">Section Header 3</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  {{/_docs-example}}
+</div>
