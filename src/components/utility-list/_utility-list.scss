@@ -65,10 +65,11 @@
     }
   }
 
-  &--dark {    
+  &--dark {
+    background-color: var(--nsw-brand-dark);
+
     .nsw-utility-list-item {
       color: var(--nsw-text-light);
-      background-color: var(--nsw-brand-dark);
       
       span {
         color: var(--nsw-text-light);
