@@ -3109,6 +3109,117 @@
     }
   }
 
+  class CopyToClipboard {
+    static copyToClipboard(element) {
+      const input = document.createElement('input');
+      input.setAttribute('value', window.location.href);
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+      const copiedElement = element;
+      copiedElement.classList.add('copied');
+      copiedElement.innerHTML = '<span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">link</span> Copied';
+      setTimeout(() => {
+        copiedElement.classList.remove('copied');
+        copiedElement.innerHTML = '<span class="material-icons nsw-material-icons" focusable="false" aria-hidden="true">link</span> Copy link';
+      }, 3000);
+    }
+    static checkCopyAnchor() {
+      const checkCopyAnchor = document.querySelector('.js-copy-header-links');
+      if (checkCopyAnchor) {
+        const h2Elements = document.querySelectorAll('h2');
+        h2Elements.forEach(h2 => {
+          if (h2.id) {
+            const span = document.createElement('span');
+            span.classList.add('material-icons', 'nsw-material-icons');
+            span.setAttribute('focusable', 'false');
+            span.setAttribute('aria-hidden', 'true');
+            span.innerText = 'link';
+            const labelSpan = document.createElement('span');
+            labelSpan.innerText = '';
+            const textSpan = document.createElement('span');
+            textSpan.innerText = labelSpan.innerText;
+            h2.appendChild(span);
+            h2.classList.add('copy-clipboard-anchor');
+            h2.appendChild(textSpan);
+            h2.addEventListener('click', () => {
+              const input = document.createElement('input');
+              const url = window.location.href.includes('#') ? window.location.href.split('#')[0] : window.location.href;
+              input.setAttribute('value', `${url}#${h2.id}`);
+              document.body.appendChild(input);
+              input.select();
+              document.execCommand('copy');
+              document.body.removeChild(input);
+              textSpan.innerText = ' Copied';
+              setTimeout(() => {
+                textSpan.innerText = labelSpan.innerText;
+              }, 3000);
+            });
+          }
+        });
+      }
+    }
+    static init() {
+      // Check for copy to clipboard anchor feature toggle
+      CopyToClipboard.checkCopyAnchor();
+      // Add event listener to copy buttons
+      const copyButtons = document.querySelectorAll('.nsw-copy-clipboard');
+      copyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          CopyToClipboard.copyToClipboard(button);
+        });
+      });
+    }
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    CopyToClipboard.init();
+  });
+
+  class GenerateSocialLinks {
+    static appendSocialLinks() {
+      const socialLinks = document.querySelectorAll('.facebook-share, .linkedin-share, .twitter-share, .email-share');
+      socialLinks.forEach(link => {
+        switch (link.classList[0]) {
+          case 'facebook-share':
+            link.setAttribute('href', `https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`);
+            break;
+          case 'linkedin-share':
+            link.setAttribute('href', `https://www.linkedin.com/shareArticle?url=${window.location.href}&title=${document.title}`);
+            break;
+          case 'twitter-share':
+            link.setAttribute('href', `https://twitter.com/intent/tweet?url=${window.location.href}&text=${document.title}`);
+            break;
+          case 'email-share':
+            link.setAttribute('href', `mailto:?subject=${encodeURIComponent(`Check out this page: ${document.title}&body=${window.location.href}`)}`);
+            break;
+          default:
+            console.log('No social links found');
+        }
+      });
+    }
+    static init() {
+      GenerateSocialLinks.appendSocialLinks();
+    }
+  }
+  window.addEventListener('DOMContentLoaded', () => {
+    GenerateSocialLinks.init();
+  });
+
+  class PrintPage {
+    static init() {
+      const printPages = document.querySelectorAll('.js-print-page');
+      printPages.forEach(printPage => {
+        printPage.addEventListener('click', () => {
+          window.print();
+        });
+      });
+    }
+  }
+  window.addEventListener('DOMContentLoaded', () => {
+    PrintPage.init();
+  });
+
   if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = Array.prototype.forEach;
   }
@@ -3140,6 +3251,9 @@
     const multiSelect = document.querySelectorAll('.js-multi-select');
     const tooltip = document.querySelectorAll('.js-tooltip');
     const toggletip = document.querySelectorAll('.js-toggletip');
+    const copyToClipboard = document.querySelectorAll('.js-copy-clipboard');
+    const socialSharing = document.querySelectorAll('.js-social-sharing');
+    const printPage = document.querySelectorAll('.js-print-page');
     openSearchButton.forEach(element => {
       new SiteSearch(element).init();
     });
@@ -3152,6 +3266,11 @@
     accordions.forEach(element => {
       new Accordion(element).init();
     });
+    if (copyToClipboard) {
+      copyToClipboard.forEach(element => {
+        new CopyToClipboard(element).init();
+      });
+    }
     dialogs.forEach(element => {
       new Dialog(element).init();
     });
@@ -3190,16 +3309,31 @@
         new Toggletip(element).init();
       });
     }
+    if (socialSharing) {
+      socialSharing.forEach(element => {
+        if (typeof element === 'function') {
+          GenerateSocialLinks(element).init();
+        }
+      });
+    }
+    if (printPage) {
+      printPage.forEach(element => {
+        new PrintPage(element).init();
+      });
+    }
   }
 
   exports.Accordion = Accordion;
+  exports.CopyToClipboard = CopyToClipboard;
   exports.Dialog = Dialog;
   exports.FileUpload = FileUpload;
   exports.Filters = Filters;
   exports.GlobalAlert = GlobalAlert;
   exports.Navigation = Navigation;
+  exports.PrintPage = PrintPage;
   exports.Select = Select;
   exports.SiteSearch = SiteSearch;
+  exports.SocialSharing = GenerateSocialLinks;
   exports.Tabs = Tabs;
   exports.Toggletip = Toggletip;
   exports.Tooltip = Tooltip;
